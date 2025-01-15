@@ -1,0 +1,31 @@
+# Pergunta 1
+Qual é a capital da França?
+- Paris
+- Londres
+- Madrid
+- Roma
+* Paris
+
+# Pergunta 2
+Qual é o maior animal terrestre?
+- Elefante
+- Girafa
+- Baleia
+- Hipopótamo
+* Elefante
+
+# Pergunta 3
+Quem pintou a Mona Lisa?
+- Vincent van Gogh
+- Pablo Picasso
+- Leonardo da Vinci
+- Claude Monet
+* Leonardo da Vinci
+
+# Pergunta 4
+Em que continente o Brasil está localizado?
+- Ásia
+- África
+- América
+- Europa
+* América
