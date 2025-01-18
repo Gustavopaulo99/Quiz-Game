@@ -4,13 +4,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             String caminhoArquivo = "perguntas.txt";
             List<Perguntas> perguntas = carregarPerguntas(caminhoArquivo);
+
+            int pontos = 0;
 
             for (Perguntas p : perguntas) {
                 System.out.println("Perguntas: " + p.getPergunta());
@@ -20,9 +23,32 @@ public class Main {
                     System.out.println((i + 1) + ". " + opcoes.get(i));
                 }
                 
-                System.out.println("Resposta correta: " + p.getRespostaCorreta());
+                System.out.print("Digite o numero da resposta correta: ");
+                int respostaUsuario;
+                
+                try {
+                    respostaUsuario = Integer.parseInt(scanner.nextLine());
+                } catch (NumberFormatException e) {
+                    System.out.println("Entrada invalida!");
+                    continue;
+                }
+
+                if(respostaUsuario < 1 || respostaUsuario > opcoes.size()){
+                    System.out.println("Resposta fora do intervalo!");
+                    continue;
+                }
+
+                String respostaEscolhida = opcoes.get(respostaUsuario - 1);
+                if(respostaEscolhida.equals(p.getRespostaCorreta())){
+                    System.out.println("Resposta correta!");
+                    pontos++;
+                }else{
+                    System.out.println("Errado! A resposta correta era: "+ p.getRespostaCorreta());
+                }
                 System.out.println();
             }
+
+            System.out.println("Voce terminou o jogo com " + pontos + " pontos");
         } catch (IOException e) {
             System.err.println("erro ao carregar o arquivo: " + e.getMessage());
         }
