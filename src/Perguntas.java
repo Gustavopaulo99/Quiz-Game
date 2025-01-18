@@ -1,3 +1,5 @@
+// Classe para organiza os dados de perguntas do Quiz
+
 import java.util.List;
 
 public class Perguntas {
