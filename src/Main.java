@@ -1,3 +1,10 @@
+/**
+ *  @author Gustavo Paulo
+ *  @author Nicolas Ruan
+ * 
+ *  18/01/25
+ */
+
 import java.io.BufferedReader; // Permite ler arquivos de texto de maneira eficiente
 import java.io.FileReader; // Facilita a leitura de arquivos linha por linha
 import java.io.IOException; // Trata erros de entrada e saida
